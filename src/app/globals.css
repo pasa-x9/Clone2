@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+.container{
+    /* outline: 1px solid white; */
+    padding: 0 10px;
+    transition: 0.9s;
+}
+li:hover{
+    color:#7B6F10;
+    transition: 0.9s;
+}
+header button:hover{
+    color: rgba(0, 0, 0, 0.888);
+}
+.h-box{
+    z-index: 1;
+    padding: 20px;
+}
+.infos img:hover{
+    border-radius: 1px;
+    transition: 0.9s;
+}
+.infos2{
+    background: url(https://mymavenedu.com/wp-content/uploads/2020/09/bg1-home1.jpg);
+    padding: 80px 0;
+}
+.scrolup{
+    animation: fade;
+    transform-origin: bottom bottom;
+    animation-timing-function: ease-in;
+    animation-duration: 0.9s;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+input::placeholder{
+    color: rgb(122, 122, 122);
+}
