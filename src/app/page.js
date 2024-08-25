@@ -67,9 +67,9 @@ const [show5, setShow5]=useState(false);
               </h3></div>
             </div>
             <div>
-              <div className='bg-[#AD8742] uppercase p-2 rounded-2xl w-fit text-xs font-semibold text-white'>about company</div>
-              <h2 className='text-3xl capitalize font-bold my-6'>10+ Years of experience in International Education Industry</h2>
-              <p className='text-justify'>Maven Consulting Group, founded in 2018, provides a comprehensive solution to students who are looking to pursue higher education and vocational training in Australia, Canada, UK, USA, and NewZealand. With more than 10 years of experience in the International Education Industry, we aim to provide excellent customer service and extensive guidance to our clients. We have our branches in Australia (Melbourne, Sydney, Hobart & Perth), Nepal (Kathmandu, Banepa, Jhapa, Pokhara, Chitwan & Hetauda), and Global Offices in Philippines, Malaysia and Bangladesh.<br /><br />
+              <div className='bg-[#AD8742] uppercase p-1 px-2 rounded-2xl w-fit md:text-xs text-[10px] font-semibold text-white'>about company</div>
+              <h2 className='md:text-3xl text-xl capitalize font-bold my-6'>10+ Years of experience in International Education Industry</h2>
+              <p className='text-justify md:text-base text-sm'>Maven Consulting Group, founded in 2018, provides a comprehensive solution to students who are looking to pursue higher education and vocational training in Australia, Canada, UK, USA, and NewZealand. With more than 10 years of experience in the International Education Industry, we aim to provide excellent customer service and extensive guidance to our clients. We have our branches in Australia (Melbourne, Sydney, Hobart & Perth), Nepal (Kathmandu, Banepa, Jhapa, Pokhara, Chitwan & Hetauda), and Global Offices in Philippines, Malaysia and Bangladesh.<br /><br />
               We believe international education shall provide students with quality education, a global perspective, and international exposure catalyzing their personal and professional growth. Hence, with the help of our experts, we aim to promote internationally recognized educational institutes of Australia to international students and help them earn an internationally recognized degree.</p>
               <div className='bg-black text-white py-2 px-4 w-fit font-semibold mt-4'>Explore More</div>
             </div>

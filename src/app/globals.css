@@ -16,6 +16,7 @@ li:hover{
 }
 header button:hover{
     color: rgba(0, 0, 0, 0.888);
+    transition: all 0.9s ease;
 }
 .h-box{
     z-index: 1;
@@ -45,4 +46,49 @@ header button:hover{
 }
 input::placeholder{
     color: rgb(122, 122, 122);
+}
+.box{
+        width: 100%;
+        position: relative;
+        transition: all 1.2s ease;
+        transform-style: preserve-3d;
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ .front{
+    background: url(https://d2j6dbq0eux0bg.cloudfront.net/images/66610504/2636936256.jpg);
+    background-size: cover;
+ }
+.back{
+    background: rgba(0, 0, 0, 0.88);
+    color: snow;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+.box:hover{
+    transform: rotateY(180deg);
+}
+.slide-left{
+    animation: slide 0.9s;
+    animation-timing-function: ease;
+}
+@keyframes slide {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 340px;
+    }
 }

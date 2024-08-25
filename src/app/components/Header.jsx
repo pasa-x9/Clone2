@@ -20,6 +20,7 @@ function Header() {
   const handNav = () =>{
     setNavVisible(!navVisible);
   }
+  const [shows, setShows] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -49,17 +50,17 @@ function Header() {
                 <li><a href="tel: +63 917 174 2302"><FaPhone className='inline-flex ' /> +63 917 174 2302 (Philippines)</a></li>
                 <li><a href="mailto: admissions@mymavenedu.com"><MdOutgoingMail className='inline-flex text-[1.2vw]' /> admissions@mymavenedu.com</a></li>
               </ul>
-              <button className='bg-[#AD8742] uppercase w-fit p-4 rounded-b-xl rounded-t-md font-semibold text-sm mb-4'><a href="#book">Book an Appointment</a></button>
+              <button className='bg-[#AD8742] uppercase w-fit p-4 rounded-b-xl rounded-t-md font-semibold text-sm mb-4'><a href="">Book an Appointment</a></button>
             </div>
           </div>
         </div>
         <div className='bg-black py-6'>
           <div className="container flex flex-nowrap justify-between items-center">
-            <div className='w-[12%]'><Link href='/'><img src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png" alt="logo" className='w-full' /></Link></div>
+            <div className='w-[12%]'><Link href="/"><img src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png" alt="logo" className='w-full' /></Link></div>
             <div className='w-fit p-4'>
               <ul className='md:flex hidden text-nowrap text-white font-[600] lg:text-sm text-xs gap-6'>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about-us">About Us</Link></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Resources</a></li>
                 <li><a href="">News and Announcements</a></li>
@@ -106,8 +107,26 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className='fixed bg-[#AD8742] outline outline-1 mr-1 outline-white rounded-2xl text-white sm:text-base text-[2.5vw] p-1 px-6 uppercase -rotate-90 top-96 -right-12 z-10'>Enquire Now</div>
+        <div className='fixed select-none bg-[#AD8742] outline outline-1 mr-1 outline-white rounded-2xl text-white sm:text-base text-[2.5vw] p-1 px-6 uppercase -rotate-90 top-96 -right-12 z-10' onClick={() => setShows(!shows)}>Enquire Now</div>
         <div className='fixed top-[90vh] left-4 z-50 scrolup py-2 px-4 rounded-md outline outline-white/10 w-fit bg-black text-white/80 text-lg hover:-translate-y-4 transition duration-700 hidden'><a href="#top">↑</a></div>
+        {shows && (
+          <div className='h-[100vh] w-[340px] bg-black fixed z-[999] top-0 right-0 slide-left py-6 px-4'>
+              <div className='scrolup flex items-center justify-between'>
+                <img className='md:w-36 w-28' src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png " alt="logo" />
+                <ImCross className='inline-flex text-white text-sm md:text-base' onClick={() => setShows(!shows)} />
+                </div>
+              <div className='scrolup py-20 px-3'>
+              <form action="#" className='grid grid-cols-1 gap-6 text-xs md:text-sm'>
+              <input type="text" placeholder='Your Name*' required className='py-2 px-3 w-full focus:outline-none border border-slate-200 rounded-xl' />
+              <input type="email" placeholder='Your Email*' required className='py-2 px-3 w-full focus:outline-none border border-slate-200 rounded-xl' />
+              <input type="tel" placeholder='Your Phone*' required className='py-2 px-3 w-full focus:outline-none border border-slate-200 rounded-xl' />
+              <input type="text" placeholder='Your City' className='py-2 px-3 w-full focus:outline-none border border-slate-200 rounded-xl' />
+              <textarea placeholder='Your Message...' className='py-2 h-[120px] px-3 w-full focus:outline-none border border-slate-200 rounded-xl' />
+              <button className='bg-[#AD8742] py-2 px-6 w-fit text-white rounded-md'>Submit</button>
+              </form>
+              </div>
+          </div>
+        )}
       </header>
     </>
   )
