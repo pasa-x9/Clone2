@@ -14,6 +14,11 @@ li:hover{
     color:#7B6F10;
     transition: 0.9s;
 }
+.bar li:hover{
+    opacity: 80%;
+    border-bottom: 3px solid;
+    transition: all 0.04s ease-in-out;
+}
 header button:hover{
     color: rgba(0, 0, 0, 0.888);
     transition: all 0.9s ease;

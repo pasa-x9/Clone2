@@ -56,8 +56,8 @@ function Header() {
         </div>
         <div className='bg-black py-6'>
           <div className="container flex flex-nowrap justify-between items-center">
-            <div className='w-[12%]'><Link href="/"><img src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png" alt="logo" className='w-full' /></Link></div>
-            <div className='w-fit p-4'>
+            <div className='w-[12%]'><a href="/"><img src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png" alt="logo" className='w-full' /></a></div>
+            <div className='bar w-fit px-4'>
               <ul className='md:flex hidden text-nowrap text-white font-[600] lg:text-sm text-xs gap-6'>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about-us">About Us</Link></li>
@@ -67,7 +67,7 @@ function Header() {
                 <li><a href="">Maven Associates</a></li>
                 <li><a href="">Gallery</a></li>
                 <li><a href="">Contact Us</a></li>
-                <li className='s-parent hover:text-white'>
+                <div className='s-parent'>
                   <div className="relative">
                     <IoIosSearch className='inline-flex text-xl lg:text-2xl hover:text-[#7B6F10] transition duration-1000' onClick={handleSearchClick} />
                     {/* The code starts with {searchVisible && (...)}. This is a conditional statement that checks the value of searchVisible. If searchVisible is true, the code inside the parentheses will be rendered. If it's false, the code will not be rendered.
@@ -78,11 +78,11 @@ function Header() {
                     } */}
                     {searchVisible && (
                       <div className='s-box absolute top-10 right-0 shadow-md w-fit p-6 backdrop-blur-xl bg-white/40 z-10'>
-                        <div><form><input type="search" placeholder='Search...' className='focus:outline-none rounded-lg py-2 px-4 text-black shadow-2xl mr-1' /><button className='text-sm inline-flex bg-black p-2 hover:text-white rounded-lg'>search</button></form></div>
+                        <div><form><input type="search" placeholder='Search...' className='focus:outline-none rounded-lg py-2 px-4 text-black shadow-2xl mr-1' /><button className='text-sm inline-flex bg-black p-2 text-white hover:text-white rounded-lg'>search</button></form></div>
                       </div>
                     )}
                   </div>
-                </li>
+                </div>
               </ul>
               <div className='relative'>
                 <TiThMenu className='text-[#AD8742] shadow-2xl md:hidden text-xl inline-flex' onClick={handNav} />
@@ -108,7 +108,7 @@ function Header() {
           </div>
         </div>
         <div className='fixed select-none bg-[#AD8742] outline outline-1 mr-1 outline-white rounded-2xl text-white sm:text-base text-[2.5vw] p-1 px-6 uppercase -rotate-90 top-96 -right-12 z-10' onClick={() => setShows(!shows)}>Enquire Now</div>
-        <div className='fixed top-[90vh] left-4 z-50 scrolup py-2 px-4 rounded-md outline outline-white/10 w-fit bg-black text-white/80 text-lg hover:-translate-y-4 transition duration-700 hidden'><a href="#top">↑</a></div>
+        <div className='fixed select-none top-[90vh] left-4 z-50 scrolup py-2 px-4 rounded-md outline outline-white/10 w-fit bg-black text-white/80 text-lg hover:-translate-y-4 transition duration-700 hidden'><a href="#top">↑</a></div>
         {shows && (
           <div className='h-[100vh] w-[340px] bg-black fixed z-[999] top-0 right-0 slide-left py-6 px-4'>
               <div className='scrolup flex items-center justify-between'>
