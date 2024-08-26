@@ -57,8 +57,8 @@ function Header() {
         <div className='bg-black py-6'>
           <div className="container flex flex-nowrap justify-between items-center">
             <div className='w-[12%]'><a href="/"><img src="https://mymavenedu.com/wp-content/uploads/2020/07/maven_logo-2.png" alt="logo" className='w-full' /></a></div>
-            <div className='bar w-fit px-4'>
-              <ul className='md:flex hidden text-nowrap text-white font-[600] lg:text-sm text-xs gap-6'>
+            <div className='w-fit px-4'>
+              <ul className='bar md:flex hidden text-nowrap text-white font-[600] lg:text-sm text-xs gap-6'>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about-us">About Us</Link></li>
                 <li><a href="">Services</a></li>
@@ -91,8 +91,8 @@ function Header() {
                   <div className='relative'>
                     <ImCross className='text-sm text-[#AD8742] absolute top-0 right-0' onClick={handNav} />
                     <ul className='text-xs py-4 grid text-nowrap gap-2'>
-                      <li><a href="/">Home</a></li>
-                      <li><a href="">About Us</a></li>
+                      <li><Link href="/">Home</Link></li>
+                      <li><Link href="/about-us">About Us</Link></li>
                       <li><a href="">Services</a></li>
                       <li><a href="">Resources</a></li>
                       <li><a href="">News and Announcements</a></li>
